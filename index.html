@@ -13,5 +13,16 @@
     <textarea placeholder="Description" id="desc"></textarea><br><br>
     <button type="submit">Submit</button>
   </form>
+
+  <script>
+    document.getElementById('bookForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const title = document.getElementById('title').value;
+      const author = document.getElementById('author').value;
+      const desc = document.getElementById('desc').value;
+
+      console.log("Book Submitted:", title, author, desc);
+    });
+  </script>                                                                             
 </body>
 </html>
